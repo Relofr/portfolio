@@ -1,6 +1,27 @@
 <template>
   <div class="grid-container">
   <div id="top" class="header-container">
+    <div id="background-wrap">
+      <div class="x1">
+        <div id="cloud1" class="cloud"></div>
+      </div>
+
+      <div class="x2">
+        <div class="cloud"></div>
+      </div>
+
+      <div class="x3">
+        <div class="cloud"></div>
+      </div>
+
+      <div class="x4">
+        <div class="cloud"></div>
+      </div>
+
+      <div class="x5">
+        <div class="cloud"></div>
+      </div>
+    </div>
     <div class="left-nav-container">
       <ul>
         <li><a href="#top" v-smooth-scroll="{ duration: 900 }"><img id="up-arrow" src="../assets/SVG/up-arrow.svg"></a></li>
@@ -9,7 +30,7 @@
         <li><a data-tool-tip="Contact" href="#contact" v-smooth-scroll="{ duration: 900 }"><img id="contact-icon" src="../assets/SVG/contact-icon.svg"></a></li>
       </ul>
     </div>
-    <div class="top-text">
+    <div class="top-text" data-splitting>
       <p>
         SOFTWARE DEVELOPMENT
       </p>
@@ -63,6 +84,18 @@
     </div>
   </div>
   <div class="contact-container">
+    <div class="jelly-container">
+  <div class="bubble-1"></div>
+  <div class="bubble-2"></div>
+  <div class="bubble-3"></div>
+  <div class="bubble-4"></div>
+  <div class="bubble-5"></div>
+  <div class="bubble-6"></div>
+  <div class="bubble-7"></div>
+  <div class="bubble-8"></div>
+  <div class="bubble-9"></div>
+  <div class="bubble-10"></div>
+</div>
     <div id="contact"></div>
   	<span id="section-title">contact</span>
   	<div class="contact-icon-container">
@@ -75,7 +108,9 @@
 </template>
 
 <script>
+import Splitting from "splitting";
 import vueSmoothScroll from "vue-smooth-scroll";
+Splitting();
 export default {
   data() {
     return {};
@@ -107,6 +142,7 @@ nav {
   background-size: 100%;
   position: relative;
 }
+
 .about-container {
   grid-area: about;
   background-color: transparent;
@@ -162,7 +198,6 @@ nav {
   grid-template-columns: auto auto auto;
   align-content: center;
   justify-content: center;
-  margin-top: -95px;
 }
 .about-icon-item {
   display: flex;
@@ -175,11 +210,12 @@ nav {
   min-height: 940px;
   display: grid;
   grid-template-columns: auto auto auto;
+  justify-content: center;
 }
 .values-icon-item {
-  margin-top: 55px;
   display: flex;
-  justify-content: flex-start;
+  width: 245px;
+  margin: 55px;
   flex-direction: column;
 }
 #values-text {
@@ -191,7 +227,7 @@ nav {
   text-align: left;
 }
 .contact-icon-container {
-  min-height: 940px;
+  min-height: 880px;
   display: grid;
   grid-template-columns: auto auto auto;
 }
@@ -207,6 +243,7 @@ nav {
   letter-spacing: 5px;
   text-align: left;
   margin: 8% 16%;
+  animation: fadeIn 2s top;
 }
 
 #about,
@@ -216,7 +253,7 @@ nav {
 }
 
 #section-title {
-  color: #FFF;
+  color: #fff;
   font-size: 2.4em;
   text-transform: uppercase;
 }
@@ -237,13 +274,17 @@ nav {
   justify-content: center;
 }
 
-#up-arrow, #about-me-icon, #value-icon, #contact-icon {
+#up-arrow,
+#about-me-icon,
+#value-icon,
+#contact-icon {
   width: 30px;
   margin: 0px;
   display: flex;
   justify-content: center;
 }
-.left-nav-container img:hover {
+
+/* .left-nav-container img:hover {
   transform: scale(1.2);
 }
 
@@ -257,25 +298,166 @@ a[data-tool-tip]::after {
   position: absolute;
   color: black;
   border-radius: 5px;
-  font-size: .75em;
-  top: .5px;
+  font-size: 0.75em;
+  top: 0.5px;
   left: 0;
   margin-left: 10px;
   margin-bottom: 10px;
   white-space: nowrap;
   transform: scale(0);
-  transition: 
-    transform ease-out 100ms,
-    left ease-out 100ms;
+  transition: transform ease-out 100ms, left ease-out 100ms;
 }
 
 a[data-tool-tip]:hover::after {
   transform: scale(1);
   left: 100%;
-}
+} */
 
 .divider {
   margin-bottom: 50px;
 }
 
+#background-wrap {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+@-webkit-keyframes animateCloud {
+  0% {
+    margin-left: -1000px;
+  }
+  100% {
+    margin-left: 100%;
+  }
+}
+
+@-moz-keyframes animateCloud {
+  0% {
+    margin-left: -1000px;
+  }
+  100% {
+    margin-left: 100%;
+  }
+}
+
+@keyframes animateCloud {
+  0% {
+    margin-left: -1000px;
+  }
+  100% {
+    margin-left: 100%;
+  }
+}
+
+.x1 {
+  -webkit-animation: animateCloud 35s linear infinite;
+  -moz-animation: animateCloud 35s linear infinite;
+  animation: animateCloud 35s linear infinite;
+
+  -webkit-transform: scale(0.65);
+  -moz-transform: scale(0.65);
+  transform: scale(0.65);
+}
+
+.x2 {
+  -webkit-animation: animateCloud 20s linear infinite;
+  -moz-animation: animateCloud 20s linear infinite;
+  animation: animateCloud 20s linear infinite;
+
+  -webkit-transform: scale(0.3);
+  -moz-transform: scale(0.3);
+  transform: scale(0.3);
+}
+
+.x3 {
+  -webkit-animation: animateCloud 30s linear infinite;
+  -moz-animation: animateCloud 30s linear infinite;
+  animation: animateCloud 30s linear infinite;
+
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  transform: scale(0.5);
+}
+
+.x4 {
+  -webkit-animation: animateCloud 18s linear infinite;
+  -moz-animation: animateCloud 18s linear infinite;
+  animation: animateCloud 18s linear infinite;
+
+  -webkit-transform: scale(0.4);
+  -moz-transform: scale(0.4);
+  transform: scale(0.4);
+}
+
+.x5 {
+  -webkit-animation: animateCloud 25s linear infinite;
+  -moz-animation: animateCloud 25s linear infinite;
+  animation: animateCloud 25s linear infinite;
+
+  -webkit-transform: scale(0.55);
+  -moz-transform: scale(0.55);
+  transform: scale(0.55);
+}
+
+.cloud {
+  background: #c4c4c4;
+
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+
+  height: 120px;
+  position: relative;
+  width: 350px;
+}
+
+.cloud:after,
+.cloud:before {
+  background: #c4c4c4;
+  content: "";
+  position: absolute;
+  z-index: -1;
+}
+
+.cloud:after {
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+
+  height: 100px;
+  left: 50px;
+  top: -50px;
+  width: 100px;
+}
+
+.cloud:before {
+  -webkit-border-radius: 200px;
+  -moz-border-radius: 200px;
+  border-radius: 200px;
+
+  width: 180px;
+  height: 180px;
+  right: 50px;
+  top: -90px;
+}
+
+.top-text.words .char{
+  animation: slide-down 2s forwards;
+  opacity: 0;
+}
+@keyframes slide-down {
+  from {
+    transform: translateY(125%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
 </style>

@@ -12,6 +12,7 @@
   "dependencies": {
     "express": "^4.16.3",
     "materialize-css": "^1.0.0-rc.2",
+    "splitting": "^1.0.5",
     "vue": "^2.5.2",
     "vue-smooth-scroll": "^1.0.13"
   },
