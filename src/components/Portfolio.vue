@@ -63,6 +63,9 @@
       <div class="about-icon-item">
         <img src="../assets/SVG/htmlcssjs.svg">
       </div>
+      <div>
+        <img id="anchor" src="../assets/SVG/anchor-right.svg">
+      </div>
     </div>
   </div>
   <div class="values-container">
@@ -459,5 +462,13 @@ a[data-tool-tip]:hover::after {
     transform: translateY(0%);
     opacity: 1;
   }
+}
+
+#anchor {
+  display: block;
+  position: absolute;
+  float: right;
+  right: 0;
+  width: 25em;
 }
 </style>
