@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: none;
+      }
+
+      .cls-1 {
+        stroke: #000;
+        stroke-linejoin: round;
+        stroke-width: 13px;
+      }
+
+      .cls-2 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="Group_1" data-name="Group 1" transform="translate(-205 -212)">
+    <rect id="Rectangle_1" data-name="Rectangle 1" width="15.636" height="93.815" transform="translate(233 240.184)"/>
+    <path id="Subtraction_1" data-name="Subtraction 1" d="M12.152,58.016h0L0,47.767,37.134,0h2.64L50.331,8.905Z" transform="translate(234.705 240.184)"/>
+    <path id="Subtraction_2" data-name="Subtraction 2" d="M44.232,56.771H36.165L0,10.25,12.151,0l39.36,50.63-7.28,6.141Z" transform="translate(235.886 277.229)"/>
+    <rect id="Rectangle_6" data-name="Rectangle 6" width="16.287" height="48.159" transform="translate(324.627 278.948) rotate(90)"/>
+    <rect id="Rectangle_7" data-name="Rectangle 7" width="15.636" height="93.815" transform="translate(272.403 240.184)"/>
+    <rect id="Rectangle_8" data-name="Rectangle 8" width="15.636" height="93.815" transform="translate(311.18 240.184)"/>
+    <g id="Rectangle_91" data-name="Rectangle 91" class="cls-1" transform="translate(205 212)">
+      <rect class="cls-2" width="150" height="150"/>
+      <rect class="cls-3" x="6.5" y="6.5" width="137" height="137"/>
+    </g>
+  </g>
+</svg>
