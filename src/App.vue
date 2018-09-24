@@ -10,7 +10,7 @@
     </section>
 
     <section id="values">
-      <values />
+      <!-- <values /> -->
     </section>
 
     <section id="contact">
@@ -26,6 +26,7 @@ import AboutMe from './components/AboutMe';
 import Values from './components/Values';
 import Contact from './components/Contact';
 import vueSmoothScroll from "vue-smooth-scroll";
+import TweenMax from "gsap/TweenMax";
 
 export default {
   name: 'App',
@@ -37,39 +38,48 @@ export default {
 
 <style lang='scss'>
 
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: 'Montserrat';
   margin: 0;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  background: linear-gradient(to bottom, #0575b2, #034163, #02273c);
+  // scroll-snap-type: y mandatory;
+  // overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 section {
   padding: 7em;
   height: calc(100vh);
-  scroll-snap-align: start;
+  // scroll-snap-align: start;
 
   &:nth-of-type(1) {
     padding: 0;
     height: calc(100vh);
-    // background: blue;
+    background-image: url(./assets/images/ocean-top.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: bottom;
+    margin: -2px;
   }
 
   &:nth-of-type(2) {
-    // background: green;
+    background: linear-gradient(to bottom, #1b98dc, #0575b2);
   }
 
   &:nth-of-type(3) {
-    // background: #FFF;
+    background: linear-gradient(to bottom, #0575b2, #034163, #02273c);
   }
 
   &:nth-of-type(4) {
-    background-image: url(./assets/images/ocean-floor2.svg);
+    background-image: url(./assets/images/ocean-floor.svg), linear-gradient(to bottom, #02273c, #010d14);
     background-size: 100%;
     background-repeat: no-repeat;
     background-color: transparent;
     background-position: bottom;
   }
 }
+
 </style>

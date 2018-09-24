@@ -1,103 +1,99 @@
 <template>
-  <div v-scroll-reveal.reset class="contact-icons">
-    <a href="https://github.com/Relofr" target="_blank"><span>Github</span></a>
-    <a href="https://www.linkedin.com/in/kyle-hatch/" target="_blank"><span>LinkedIn</span></a>
-    <a href="mailto:ky13h4tch@gmail.com"><span>ky13h4tch@gmail.com</span></a>
-    <a><span>(385)223-5329</span></a>
+  <div v-scroll-reveal.reset="{ delay: 150 }">
+    <ul>
+      <li tooltip="Github">
+        <a href="https://github.com/Relofr" target="_blank"><img src="../assets/social-icons/github.svg"></a>
+      </li>
+      <li tooltip="LinkedIn">
+        <a href="https://www.linkedin.com/in/kyle-hatch/" target="_blank"><img src="../assets/social-icons/linkedin.svg"></a>
+      </li>
+      <li tooltip="ky13h4tch@gmail.com">
+        <a href="mailto:ky13h4tch@gmail.com"><img src="../assets/social-icons/email.svg"></a>
+      </li>
+      <li tooltip="(385)-223-5329">
+        <img src="../assets/social-icons/phone.svg">
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
 export default {
-  data () {
-    return {
-    }
+  data() {
+    return {};
   }
-}
+};
 </script>
 
-<style scoped>
-
-.contact-icons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+<style lang='less' scoped>
+ul {
+  text-align: center;
+  padding-top: 10rem;
 }
-
-a {
-  color:#fff;
-  border-radius:4px;
-  text-align:center;
-  text-decoration:none;
-  position: relative;
+li {
   display: inline-block;
-  padding-top: 70px;
-  margin:0 2px;
-  -o-transition:all .5s;
-  -webkit-transition: all .5s;
-  -moz-transition: all .5s;
-  transition: all .5s;
-  -webkit-font-smoothing: antialiased;
-  width: auto;
-  height: 100px;
-  margin: 3%;
-}
-a:hover {
-  transform: scale(.96);
+  padding: 2.5rem;
 }
 
-a span {
-  color:#2a3a4a;
-  position:absolute;
-  bottom:0;
-  left:-25px;
-  right:-25px;
-  padding:5px 7px;
-  z-index:-1;
-  font-size:14px;
-  border-radius:2px;
-  background:#fff;
-  visibility:hidden;
-  opacity:0;
-  -o-transition:all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  -webkit-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  -moz-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  font-size: 12px;
-  font-weight: bold;
+img {
+  width: 100%;
+  width: 6em;
+  height: auto;
+  transition: .6s;
 }
 
-a span:before {
-  content:'';
-  width: 0; 
-  height: 0; 
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 5px solid #fff;
-  position:absolute;
-  bottom:-5px;
-  left:40px;
+img:hover {
+  transform: scale(1.2);
 }
 
-a:hover span {
-  bottom:50px;
-  visibility:visible;
-  opacity:1;
-  transform: scale(1.5);
+@media (max-width: 507px) {
+  ul {
+    padding-top: 0;
+  }
 }
 
-a:nth-of-type(1):before {
-  content: url(../assets/social-icons/github.svg);
+[tooltip]{
+  position:relative;
+  display:inline-block;
 }
-a:nth-of-type(2):before {
-  content: url(../assets/social-icons/linkedin.svg);
-}
-a:nth-of-type(3):before {
-  content: url(../assets/social-icons/email.svg);
-}
-a:nth-of-type(4):before {
-  content: url(../assets/social-icons/phone.svg);
+[tooltip]::before {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    border-width: 6px 6px 0px 6px;
+    border-style: solid;
+    border-color: #FFF transparent transparent transparent;
+    z-index: 99;
+    opacity: 0;
 }
 
+[tooltip]::after {
+    content: attr(tooltip);
+    position: absolute;
+    left: 50%;
+    top: 18px;
+    transform: translateX(-50%) translateY(-100%);
+    background: #FFF;
+    text-align: center;
+    color: #2a3a4a;
+    font-size: 16px;
+    border-radius: 120px;
+    pointer-events: none;
+    padding: .8em 1.2em;
+    z-index: 99;
+    opacity: 0;
+    min-width: 10em;
+}
 
+[tooltip-position='top']::after{
+  left:50%;
+}
+
+[tooltip]:hover::after,[tooltip]:hover::before {
+  opacity: 1;
+  transition: .5s;
+}
 </style>
