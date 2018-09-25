@@ -4,7 +4,7 @@
       <Navbar />
     </div>
     <div class="background">
-
+      <p>Still working on this portfolio, all artwork is created by me.</p>
     </div>
   </div>
 </template>
