@@ -30,5 +30,6 @@ export default {
   // background-repeat: no-repeat;
   // position: relative;
   // background-image: url(../../src/assets/Icons/ocean-top.svg);
+  margin: 15px;
 }
 </style>
