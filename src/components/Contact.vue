@@ -1,19 +1,24 @@
 <template>
-  <div v-scroll-reveal.reset="{ delay: 150 }">
-    <ul>
-      <li tooltip="Github">
-        <a href="https://github.com/Relofr" target="_blank"><img src="../assets/social-icons/github.svg"></a>
-      </li>
-      <li tooltip="LinkedIn">
-        <a href="https://www.linkedin.com/in/kyle-hatch/" target="_blank"><img src="../assets/social-icons/linkedin.svg"></a>
-      </li>
-      <li tooltip="ky13h4tch@gmail.com">
-        <a href="mailto:ky13h4tch@gmail.com"><img src="../assets/social-icons/email.svg"></a>
-      </li>
-      <li tooltip="(385)-223-5329">
-        <img src="../assets/social-icons/phone.svg">
-      </li>
-    </ul>
+  <div>
+    <div class="section-title">
+      <span>Contact</span>
+    </div>
+    <div v-scroll-reveal.reset="{ delay: 150 }">
+      <ul>
+        <li tooltip="Github">
+          <a href="https://github.com/Relofr" target="_blank"><img src="../assets/social-icons/github.svg"></a>
+        </li>
+        <li tooltip="LinkedIn">
+          <a href="https://www.linkedin.com/in/kyle-hatch/" target="_blank"><img src="../assets/social-icons/linkedin.svg"></a>
+        </li>
+        <li tooltip="ky13h4tch@gmail.com">
+          <a href="mailto:ky13h4tch@gmail.com"><img src="../assets/social-icons/email.svg"></a>
+        </li>
+        <li tooltip="(385)-223-5329">
+          <img src="../assets/social-icons/phone.svg">
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -96,4 +101,12 @@ img:hover {
   opacity: 1;
   transition: .5s;
 }
+
+
+.section-title {
+    font-size: 33px;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+  }
 </style>

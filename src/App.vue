@@ -11,6 +11,9 @@
 
     <section id="values">
       <!-- <values /> -->
+      <div class="section-title">
+        <span>My Values</span>
+      </div>
     </section>
 
     <section id="contact">
@@ -81,5 +84,14 @@ section {
     background-position: bottom;
   }
 }
+
+
+.section-title {
+    font-size: 33px;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFF;
+  }
 
 </style>
